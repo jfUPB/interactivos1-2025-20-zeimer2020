@@ -55,9 +55,7 @@ function draw() {
   for (let i = 0; i < 20; i++) {
    
     fill(
-      128 + 127 * sin(frameCount * 0.03 + i),
-      128 + 127 * sin(frameCount * 0.04 + i),
-      255+ 127 * sin(frameCount * 0.04 + i),
+      128 + 127 * sin(frameCount * 0.03 + i), 128 + 127 * sin(frameCount * 0.04 + i), 255+ 127 * sin(frameCount * 0.04 + i),
       150
     );
 
@@ -70,13 +68,14 @@ function draw() {
         20 + sin(frameCount * 0.04 + i) * 10
       );
     } else {square(
-        800 / 2 + sin(frameCount * 0.06 + i) * 300 - (20 + sin(frameCount * 0.05 + i) * 10) /2,
-        800 / 2 + cos(frameCount * 0.04 + i) * 300 - (20 + sin(frameCount * 0.05 + i) * 10) /2,
+        400 + sin(frameCount * 0.06 + i) * 300 ,
+       400 + cos(frameCount * 0.04 + i) * 300 ,
   20 + sin(frameCount * 0.05 + i) * 10
       );
     }
   }
 }
+
 
 ```
 
