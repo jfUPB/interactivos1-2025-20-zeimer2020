@@ -64,9 +64,9 @@ function draw() {
     if (i < 10) {
       
       circle(
-        800 / 2 + sin(frameCount * 0.04
+        400 + sin(frameCount * 0.04
                       + i) * 300,
-         800 / 2 + cos(frameCount * 0.06 + i) * 300,
+         400 + cos(frameCount * 0.06 + i) * 300,
         20 + sin(frameCount * 0.04 + i) * 10
       );
     } else {square(
