@@ -39,32 +39,49 @@ Proceso: el Programa y la asimilacion del codigo
 ### Actividad 4
 
 link a proyecto:
-https://editor.p5js.org/zeimer2020/sketches/u9FS5sDCy
-
-
+https://editor.p5js.org/zeimer2020/sketches/NEcDb5JVP
 
 ``` javascript
 
 function setup() {
-  createCanvas(400, 400);
-  
+  createCanvas(800, 800);
+  background(0);
+  noStroke();
 }
 
 function draw() {
-  background(100,30);
+  background(0, 30); 
 
-  
-  fill(random(255), random(255), random(255), 50);
- 
-  if (random(0,1) < 0.5) {
-    circle(random(0,400), random(0,400), random(10,70));
-  } else {
-    square(random(0,400), random(0,400), random(10, 42));
+  for (let i = 0; i < 20; i++) {
+   
+    fill(
+      128 + 127 * sin(frameCount * 0.03 + i),
+      128 + 127 * sin(frameCount * 0.04 + i),
+      255+ 127 * sin(frameCount * 0.04 + i),
+      150
+    );
+
+    if (i < 10) {
+      
+      circle(
+        800 / 2 + sin(frameCount * 0.04
+                      + i) * 300,
+         800 / 2 + cos(frameCount * 0.06 + i) * 300,
+        20 + sin(frameCount * 0.04 + i) * 10
+      );
+    } else {square(
+        800 / 2 + sin(frameCount * 0.06 + i) * 300 - (20 + sin(frameCount * 0.05 + i) * 10) /2,
+        800 / 2 + cos(frameCount * 0.04 + i) * 300 - (20 + sin(frameCount * 0.05 + i) * 10) /2,
+  20 + sin(frameCount * 0.05 + i) * 10
+      );
+    }
   }
 }
+
 ```
 
-<img width="405" height="396" alt="image" src="https://github.com/user-attachments/assets/6a028cc9-a70a-4da2-89e3-5c1f0df9d6ea" />
+<img width="794" height="732" alt="image" src="https://github.com/user-attachments/assets/ef47e5c7-aaa2-474c-af0a-da46de483d02" />
+
 
 
 
