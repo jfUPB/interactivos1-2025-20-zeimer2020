@@ -153,7 +153,7 @@ while True:
 
 ```
 
-El sistema fisico interactivo que creamos funciona con un micro:bit y un programa en la computadora. El micro:bit detecta si se esta presionando el boton A y envia una letra por conexion serial: "A" si el boton esta presionado o "N" si no lo esta. La computadora recibe esa letra por medio de un programa hecho en JavaScript y muestra un cuadro en la pantalla: rojo si recibe "A" y verde si recibe "N". Asi, el sistema detecta una accion fisica, la procesa y da una respuesta visual, lo que lo convierte en un sistema fisico interactivo.k
+El sistema fisico interactivo que creamos funciona con un micro:bit y un programa en la computadora. El micro:bit detecta si se esta presionando el boton A y envia una letra "A" si el boton esta presionado o "N" si no lo esta. La Pc recibe esa letra por medio de un programa hecho en JavaScript y muestra un cuadro en la pantalla, rojo si recibe "A" y verde si recibe "N". Asi, el sistema detecta una accion fisica, la procesa y da una respuesta visual, lo que lo convierte en un sistema fisico interactivo.k
 
 
 
