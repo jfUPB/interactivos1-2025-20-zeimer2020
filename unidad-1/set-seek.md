@@ -82,10 +82,33 @@ function draw() {
 <img width="794" height="732" alt="image" src="https://github.com/user-attachments/assets/ef47e5c7-aaa2-474c-af0a-da46de483d02" />
 
 
+### Actividad 5
+
+Sistema fisico interactivo creado (parte de la biblioteca importada)
+
+``` javascript
+from microbit import *
+
+uart.init(baudrate=115200)
+
+while True:
+
+    if button_a.is_pressed():
+        uart.write('A')
+    else:
+        uart.write('N')
+
+    sleep(100)
 
 
 
+```
 
+Este sistema usa el micro:bit para detectar si se presiona el boton A. Si el boton A esta siendo presionado, el micro:bit envia la letra 'A' si no se presiona, envia la letra 'N'.
+
+Todo esto se hace por el programa escrito en Python, que se repite todo el tiempo gracias al while True. Esto lo convierte en un sistema fisico interactivo porque:
+
+Recibe una entrada fisica cuando se presiona un boton, procesa esa informacion con un programa y responde enviando un mensaje a otro dispositivo.
 
 
 
