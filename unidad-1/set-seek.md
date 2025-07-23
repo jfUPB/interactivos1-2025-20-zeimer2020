@@ -102,15 +102,58 @@ while True:
 
 
 
+  let port;
+  let connectBtn;
+  let connectionInitialized = false;
+
+  function setup() {
+    createCanvas(400, 400);
+    background(220);
+    port = createSerial();
+    connectBtn = createButton("Connect to micro:bit");
+    connectBtn.position(80, 300);
+    connectBtn.mousePressed(connectBtnClick);
+  }
+
+  function draw() {
+    background(220);
+
+    if (port.opened() && !connectionInitialized) {
+      port.clear();
+      connectionInitialized = true;
+    }
+
+    if (port.availableBytes() > 0) {
+      let dataRx = port.read(1);
+      if (dataRx == "A") {
+        fill("red");
+      } else if (dataRx == "N") {
+        fill("green");
+      }
+    }
+
+    rectMode(CENTER);
+    rect(width / 2, height / 2, 50, 50);
+
+    if (!port.opened()) {
+      connectBtn.html("Connect to micro:bit");
+    } else {
+      connectBtn.html("Disconnect");
+    }
+  }
+
+  function connectBtnClick() {
+    if (!port.opened()) {
+      port.open("MicroPython", 115200);
+      connectionInitialized = false;
+    } else {
+      port.close();
+    }
+  }
+
 ```
 
-Este sistema usa el micro:bit para detectar si se presiona el boton A. Si el boton A esta siendo presionado, el micro:bit envia la letra 'A' si no se presiona, envia la letra 'N'.
-
-Todo esto se hace por el programa escrito en Python, que se repite todo el tiempo gracias al while True. Esto lo convierte en un sistema fisico interactivo porque:
-
-Recibe una entrada fisica cuando se presiona un boton, procesa esa informacion con un programa y responde enviando un mensaje a otro dispositivo.
-
-
+El sistema fisico interactivo que creamos funciona con un micro:bit y un programa en la computadora. El micro:bit detecta si se esta presionando el boton A y envia una letra por conexion serial: "A" si el boton esta presionado o "N" si no lo esta. La computadora recibe esa letra por medio de un programa hecho en JavaScript y muestra un cuadro en la pantalla: rojo si recibe "A" y verde si recibe "N". Asi, el sistema detecta una accion fisica, la procesa y da una respuesta visual, lo que lo convierte en un sistema fisico interactivo.k
 
 
 
