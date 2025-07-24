@@ -119,3 +119,5 @@ while True:
         uart.write("B")
     sleep(100)
 ```
+
+Este codigo hace que el micro:bit pueda mover un circulo en la pantalla del computador. Cuando uno oprime el boton A del micro:bit, este manda una letra "A", y si se oprime el boton B, manda una "B". En el computador hay un programa que dibuja un circulo y, al darle al boton "Conectar", empieza a escuchar lo que manda el micro:bit. Si llega una "A", el circulo se va a la izquierda; si llega una "B", se va a la derecha. Es como si el micro:bit fuera un control para mover el circulo a los lados.
