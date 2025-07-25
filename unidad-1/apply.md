@@ -143,4 +143,4 @@ while True:
     sleep(100)
 ```
 
-Este codigo hace que el microbit pueda mover un circulo en la pantalla del computador. Cuando uno oprime el boton A del microbit, este manda una letra A, y si se oprime el boton B, manda una B. En el computador hay un programa que dibuja un circulo y, al darle al boton Conectar, empieza a escuchar lo que manda el microbit. Si llega una A, el circulo se va a la izquierda si llega una B, se va a la derecha. Es como si el microbit fuera un control para mover el circulo a los lados.
+Este codigo hace que el microbit pueda mover un circulo en la pantalla del computador cuando se oprime el boton A del microbit, este manda una letra A, y si se oprime el boton B, manda una B. En el computador hay un programa que dibuja un circulo y, al darle al boton Conectar, empieza a escuchar lo que manda el microbit. Si llega una A, el circulo se va a la izquierda si llega una B, se va a la derecha. Es como si el microbit fuera un control para mover el circulo a los lados.
