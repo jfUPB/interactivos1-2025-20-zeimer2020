@@ -92,6 +92,94 @@ while True:
 
 Los estados presentes en este caso serian amarillo rojo y verde, el unico evento que maneja es el sleep pa que duerman los leds y cambien entre colores, luego ya las acciones serian limpiar la pantalla, encender un pixel, esperar x tiempo antes de hacer la ultima accion que seria cambiar de estado
 
+### Activiada 3
+
+
+``` python
+from microbit import *
+import utime
+
+STATE_INIT = 0
+STATE_HAPPY = 1
+STATE_SMILE = 2
+STATE_SAD = 3
+
+HAPPY_INTERVAL = 1500
+SMILE_INTERVAL = 1000
+SAD_INTERVAL = 2000
+
+current_state = STATE_INIT
+start_time = 0
+interval = 0
+
+while True:
+    # pseudoestado STATE_INIT
+    if current_state == STATE_INIT:
+        display.show(Image.HAPPY)
+        start_time = utime.ticks_ms()
+        interval = HAPPY_INTERVAL
+        current_state = STATE_HAPPY
+    elif current_state == STATE_HAPPY:
+        if button_a.was_pressed():
+            # Acciones para el evento
+            display.show(Image.SAD)
+            # Acciones de entrada para el siguiente estado
+            start_time = utime.ticks_ms()
+            interval = SAD_INTERVAL
+            current_state = STATE_SAD
+        if utime.ticks_diff(utime.ticks_ms(), start_time) > interval:
+            # Acciones para el evento
+            display.show(Image.SMILE)
+            # Acciones de entrada para el siguiente estado
+            start_time = utime.ticks_ms()
+            interval = SMILE_INTERVAL
+            current_state = STATE_SMILE
+    elif current_state == STATE_SMILE:
+        if button_a.was_pressed():
+            display.show(Image.HAPPY)
+            start_time = utime.ticks_ms()
+            interval = HAPPY_INTERVAL
+            current_state = STATE_HAPPY
+        if utime.ticks_diff(utime.ticks_ms(), start_time) > interval:
+            display.show(Image.SAD)
+            start_time = utime.ticks_ms()
+            interval = SAD_INTERVAL
+           current_state = STATE_SAD
+    elif current_state == STATE_SAD:
+        if button_a.was_pressed():
+            display.show(Image.SMILE)
+            start_time = utime.ticks_ms()
+            interval = SMILE_INTERVAL
+            current_state = STATE_SMILE
+        if utime.ticks_diff(utime.ticks_ms(), start_time) > interval:
+            display.show(Image.HAPPY)
+            start_time = utime.ticks_ms()
+            interval = HAPPY_INTERVAL
+            current_state = STATE_HAPPY
+```
+
+Explica por qué decimos que este programa permite realizar de manera concurrente varias tareas.
+
+el programa simula tareas concurrentes al manejar tiempo y eventos sin detenerse, permitiendo respuestas simultaneas
+
+
+Identifica los estados, eventos y acciones en el programa
+
+
+los estados son init, happy, smile, sad. Los eventos son boton a y paso del tiempo. Las ccciones son mostrar imagen y cambiar estado.
+
+
+Describe y aplica al menos 3 vectores de prueba para el programa. Para definir un vector de prueba debes llevar al sistema a un estado, generar los eventos
+y observar el estado siguiente y las acciones que ocurrirán. Por tanto, un vector de prueba tiene unas condiciones iniciales del sistema, unos resultados
+esperados y los resultados realmente obtenidos. Si el resultado obtenido es igual al esperado entonces el sistema pasó el vector de prueba, de lo contrario
+el sistema puede tener un error.
+
+el vector 1 init muestra happy y pasa a happy, pasa la prueba. el vector 2 en happy presionar a muestra sad y pasa a sad, pasa la prueba. vector 3: en smile sin presionar pasa el tiempo, muestra sad y cambia a sad y pasa la prueba
+
+
+
+
+
 
 
 
