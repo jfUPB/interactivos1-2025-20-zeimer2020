@@ -61,7 +61,6 @@ while True:
             music.stop()
             display.clear()
         else:
-            #
             if utime.ticks_diff(now, last_tick) >= 500:
                 if display.get_pixel(2, 2) == 0:
                     display.show(Image.SKULL)
@@ -69,4 +68,5 @@ while True:
                     display.clear()
                 last_tick = now
 ```
+
 
