@@ -17,7 +17,6 @@ import music
 import utime
 
 # Code in a 'while True:' loop repeats forever
-# Estados
 STATE_CONFIG = 0
 STATE_ARMED = 1
 STATE_EXPLODED = 2
@@ -28,7 +27,6 @@ current_time = 20  # se supone que esto es el tiempo y si no funciona me pego un
 countdown = 0
 start_time = utime.ticks_ms()
 last_tick = utime.ticks_ms()
-# Code in a 'while True:' loop repeats forever
 while True:
     now = utime.ticks_ms()
     if current_state == STATE_CONFIG:
@@ -68,5 +66,6 @@ while True:
                     display.clear()
                 last_tick = now
 ```
+
 
 
