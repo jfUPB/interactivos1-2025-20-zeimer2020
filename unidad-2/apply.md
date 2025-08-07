@@ -5,6 +5,7 @@
 
 ### Actividad 4
 
+<img width="802" height="720" alt="image" src="https://github.com/user-attachments/assets/3cf921e0-e060-46cb-89b9-93feee3db427" />
 
 
 ### Actividad 5
@@ -66,6 +67,7 @@ while True:
                     display.clear()
                 last_tick = now
 ```
+
 
 
 
