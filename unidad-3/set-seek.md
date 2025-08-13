@@ -63,4 +63,7 @@ es mas facil de manejar y llamar a la accion a cada semaforo, que tener que colo
 si, ya que en el microbit se logra ver como es todos los semaforos funciona al mismo tiempo a su propia forma
 
 
+### Actividad 2
+
+
 
