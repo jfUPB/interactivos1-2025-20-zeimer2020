@@ -61,3 +61,6 @@ es mas facil de manejar y llamar a la accion a cada semaforo, que tener que colo
 #### Puedes ver cómo la técnica de programación con máquinas de estado y el uso de funciona no bloqueantes te permite que varios semáforos funcionen al mismo tiempo?
 
 si, ya que en el microbit se logra ver como es todos los semaforos funciona al mismo tiempo a su propia forma
+
+
+
