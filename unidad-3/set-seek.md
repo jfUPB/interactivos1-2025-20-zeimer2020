@@ -202,10 +202,11 @@ while True:
 
 Vectores de prueba tabla y diagrama
 
-<img width="546" height="653" alt="image" src="https://github.com/user-attachments/assets/18520bbd-c9f8-46a6-98c3-4bd2c14895cd" />
+<img width="643" height="774" alt="image" src="https://github.com/user-attachments/assets/2b9e3a82-6098-4f26-b7fb-37c29dc65e6c" />
 
 
 <img width="826" height="380" alt="image" src="https://github.com/user-attachments/assets/589f5945-3d9a-4782-ad07-2b255302649b" />
+
 
 
 
