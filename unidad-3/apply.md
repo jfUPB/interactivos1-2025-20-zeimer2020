@@ -36,3 +36,4 @@ while True:
 
 profe cuando se usa en el microbit no fui capaz de hacer que se viera el numero completo, solo da numeros del 0 al 9, entonces por ejemplo si es 23 solo muestra el 3 y no se pq, eso ya fue error mio desde el p5:js 
 
+
