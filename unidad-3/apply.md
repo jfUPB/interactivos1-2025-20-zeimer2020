@@ -16,11 +16,11 @@ display.show(Image.HAPPY)
 # Code in a 'while True:' loop repeats forever
 while True:
     if button_a.was_pressed():
-        uart.write("A\n")
+        uart.write("A")
     if button_b.was_pressed():
-        uart.write("B\n")
+        uart.write("B")
     if button_a.is_pressed() and button_b.is_pressed():
-        uart.write("S\n")
+        uart.write("S")
     if uart.any():
         msg = uart.readline()
         if msg:
@@ -35,5 +35,6 @@ while True:
 ``` 
 
 profe cuando se usa en el microbit no fui capaz de hacer que se viera el numero completo, solo da numeros del 0 al 9, entonces por ejemplo si es 23 solo muestra el 3 y no se pq, eso ya fue error mio desde el p5:js 
+
 
 
