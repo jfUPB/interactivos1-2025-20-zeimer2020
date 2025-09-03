@@ -143,21 +143,6 @@ Código modificado:
 ``` js
 'use strict';
 
-if (typeof window.gd === 'undefined') {
-  window.gd = {
-    timestamp: function () {
-      const d = new Date();
-      const pad = (n, z = 2) => ('00' + n).slice(-z);
-      return d.getFullYear().toString()
-        + pad(d.getMonth() + 1)
-        + pad(d.getDate()) + '_'
-        + pad(d.getHours())
-        + pad(d.getMinutes())
-        + pad(d.getSeconds());
-    }
-  };
-}
-
 var formResolution = 15;
 var stepSize = 2;
 var distortionFactor = 1;
@@ -288,6 +273,7 @@ function windowResized() {
 ## Video
 
 [Video demostratativo](URL)
+
 
 
 
