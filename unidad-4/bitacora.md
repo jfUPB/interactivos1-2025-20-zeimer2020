@@ -2,8 +2,8 @@
 
 ## Código
 
-[Enlace a la aplicación a modificar](URL)
-https://editor.p5js.org/generative-design/sketches/HkrbeqqqTJV
+[Enlace a la aplicación a modificar](https://editor.p5js.org/generative-design/sketches/HkrbeqqqTJV)
+
 
 Código a modificar:
 
@@ -135,9 +135,9 @@ function keyReleased() {
 
 ```
 
-[Enlace a la aplicación modificada](URL)
+[Enlace a la aplicación modificada](
+https://editor.p5js.org/zeimer2020/sketches/746R5_qyN)
 
-https://editor.p5js.org/zeimer2020/sketches/746R5_qyN
 
 Código modificado:
 
@@ -274,6 +274,7 @@ function windowResized() {
 ## Video
 
 [Video demostratativo](https://youtu.be/3A4R9IRAQ7I)
+
 
 
 
