@@ -35,3 +35,18 @@ Explica por qué en la unidad anterior teníamos que enviar la información deli
 
 como yo lo interpreto es que era pq en una estabamos viendo
 
+
+##### Explica por qué en la unidad anterior teníamos que enviar la información delimitada y además marcada con un salto de línea y ahora no es necesario.
+
+lo que entiendo es que se debe a que ahora que usamos binario el programa peude entender mas directamente lo que estamos enviando, ademas de que en binario lo que enviemos pesa muchisimo menos
+
+#### Compara el código de la unidad anterior relacionado con la recepción de los datos seriales que ves ahora. ¿Qué cambios observas?
+
+el tipo de datos que recibe ahora son distintos, me genera un poco de problemas entender como esta reciviendo este tipo de lenguaje pero voy captando que es mas rapido y directo
+
+
+##### Diferencias entre datos y demas cositas entre cada codigo
+
+
+
+
