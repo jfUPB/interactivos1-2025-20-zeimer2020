@@ -48,5 +48,17 @@ el tipo de datos que recibe ahora son distintos, me genera un poco de problemas 
 ##### Diferencias entre datos y demas cositas entre cada codigo
 
 
+al inicio estamos viendo principalmente una verificacion de que tipo de datos recibe, estamos "quemando" los datos y entradas para verificar, uno de los codigos nos da datos mas directos de la posicion del microbit, que botones estan presionadso, si esta listo para dibujar y datos mas especificos, mientras que el otro
+
+<img width="821" height="111" alt="image" src="https://github.com/user-attachments/assets/57086b3e-2f9e-40a2-b825-193c20d5c1f9" />
+
+ya con el otro siendo una version final recibe los datos y el feedback que nos da es mas condensado, recibe los datos del microbit y genera las imagenes pedidas y se guia con el virtual mouse que hacemos con el microbit o mas bien el acelerometro
+<img width="1585" height="174" alt="image" src="https://github.com/user-attachments/assets/a6634484-5452-4788-a540-cebb53f7181a" />
+
+
+
+
+
+
 
 
