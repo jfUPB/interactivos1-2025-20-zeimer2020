@@ -56,9 +56,171 @@ ya con el otro siendo una version final recibe los datos y el feedback que nos d
 <img width="1585" height="174" alt="image" src="https://github.com/user-attachments/assets/a6634484-5452-4788-a540-cebb53f7181a" />
 
 
+### transformacion del codigo generativo para que reciba datos en binario
 
 
+``` python
+from microbit import *
+import struct
+
+uart.init(115200)
+display.set_pixel(0, 0, 9)
+
+while True:
+    xValue = accelerometer.get_x()
+    yValue = accelerometer.get_y()
+    aState = button_a.is_pressed()
+    bState = button_b.is_pressed()
+    data = struct.pack('>2h2B', xValue, yValue, int(aState), int(bState))
+    checksum = sum(data) % 256
+    packet = b'\xAA' + data + bytes([checksum])
+    uart.write(packet)
+    sleep(100)
+```
+
+primero intento de binario en p5:js
+
+<img width="892" height="706" alt="image" src="https://github.com/user-attachments/assets/f2d47965-507f-4c83-a0d0-96c9f095f7e5" />
+teniendolo ya conectado con el microbit no se movia, se quedaba ahi abajo la continuidad del programa y no avanzaba, empece a revisar de nuevo el github y busque en internet y me di cuenta de que uno de los errores que estaba cometiendo era que tenia el programa recibiendo binario, pero habia quitado la opcion de que el programa fuera manejable por el microbit, entonces recibia datos en binario pero no tenia como manera de ser controlado por el microbit
 
 
+``` js
+'use strict';
+
+var formResolution = 15;
+var stepSize = 2;
+var distortionFactor = 1;
+var initRadius = 150;
+var centerX, centerY;
+var x = [];
+var y = [];
+var filled = false;
+var freeze = false;
+
+let port;
+let accX = 0, accY = 0;
+let btnA = false, btnB = false;
+let virtMouseX = null, virtMouseY = null;
+let easing = 0.08;
+let portOpened = false;
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  centerX = width / 2;
+  centerY = height / 2;
+  var angle = radians(360 / formResolution);
+  for (var i = 0; i < formResolution; i++) {
+    x.push(cos(angle * i) * initRadius);
+    y.push(sin(angle * i) * initRadius);
+  }
+  stroke(0, 50);
+  strokeWeight(0.75);
+  background(255);
+}
+
+function draw() {
+  if (port && port.available && port.available() > 0) {
+    let line = port.readUntil("\n");
+    if (line && line.length > 0) {
+      line = line.trim();
+      const parts = line.split(',');
+      if (parts.length === 4) {
+        const px = parseInt(parts[0], 10);
+        const py = parseInt(parts[1], 10);
+        const pa = (parts[2] === 'True' || parts[2] === '1' || parts[2] === 'true');
+        const pb = (parts[3] === 'True' || parts[3] === '1' || parts[3] === 'true');
+        if (!Number.isNaN(px)) accX = px;
+        if (!Number.isNaN(py)) accY = py;
+        btnA = !!pa;
+        btnB = !!pb;
+        const mx = map(accX, -1024, 1024, 0, width, true);
+        const my = map(accY, -1024, 1024, 0, height, true);
+        if (virtMouseX === null || virtMouseY === null) {
+          virtMouseX = mx;
+          virtMouseY = my;
+        } else {
+          virtMouseX += (mx - virtMouseX) * easing;
+          virtMouseY += (my - virtMouseY) * easing;
+        }
+        if (btnA) {
+          filled = false;
+          console.log("Boton A presionado en el micro:bit");
+        }
+        if (btnB) {
+          filled = true;
+          console.log("Boton B presionado en el micro:bit");
+        }
+      }
+    }
+  }
+
+  const targetX = (virtMouseX === null) ? mouseX : virtMouseX;
+  const targetY = (virtMouseY === null) ? mouseY : virtMouseY;
+  centerX += (targetX - centerX) * 0.01;
+  centerY += (targetY - centerY) * 0.01;
+
+  for (var i = 0; i < formResolution; i++) {
+    x[i] += random(-stepSize, stepSize);
+    y[i] += random(-stepSize, stepSize);
+  }
+
+  if (filled) {
+    fill(random(255));
+  } else {
+    noFill();
+  }
+
+  beginShape();
+  curveVertex(x[formResolution - 1] + centerX, y[formResolution - 1] + centerY);
+  for (var j = 0; j < formResolution; j++) {
+    curveVertex(x[j] + centerX, y[j] + centerY);
+  }
+  curveVertex(x[0] + centerX, y[0] + centerY);
+  curveVertex(x[1] + centerX, y[1] + centerY);
+  endShape();
+}
+
+function mousePressed() {
+  if (!portOpened) {
+    port = createSerial();
+    port.open('MicroPython', 115200);
+    portOpened = true;
+  }
+  centerX = mouseX;
+  centerY = mouseY;
+  var angle = radians(360 / formResolution);
+  var radius = initRadius * random(0.5, 1);
+  for (var i = 0; i < formResolution; i++) {
+    x[i] = cos(angle * i) * initRadius;
+    y[i] = sin(angle * i) * initRadius;
+  }
+}
+
+function keyReleased() {
+  if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png');
+  if (keyCode == DELETE || keyCode == BACKSPACE) background(255);
+  if (key == '1') filled = false;
+  if (key == '2') filled = true;
+  if (key == 'f' || key == 'F') {
+    freeze = !freeze;
+    if (freeze) noLoop(); else loop();
+  }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+```
+ya ahora si el codigo se deja controlar por el microbit y recibe los datos en binario, se puede ver abajo en el registro de consola
+<img width="854" height="727" alt="image" src="https://github.com/user-attachments/assets/02bd9e39-e0b5-4ed5-8291-c774501b0c13" />
+
+<img width="1765" height="750" alt="image" src="https://github.com/user-attachments/assets/b5cdf54e-8fcf-4b8d-bc11-bc4279ca7349" />
+
+aqui ya se ve como la control con el microbit y abajo coloque para que no codificara los datos en el registro si no que nos los muestre en crudo para poder ver que si esta agarrando todo directamente en binario
+
+
+https://stackoverflow.com/questions/14430633/how-to-convert-text-to-binary-code-in-javascript
+
+use este link para enterarme de algunas cosas en el jv 
 
 
