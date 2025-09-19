@@ -224,3 +224,10 @@ https://stackoverflow.com/questions/14430633/how-to-convert-text-to-binary-code-
 use este link para enterarme de algunas cosas en el jv 
 
 
+<img width="1085" height="599" alt="image" src="https://github.com/user-attachments/assets/934af4eb-7780-48a2-ac58-32dd857f4456" />
+
+1. 4.4 ya que sientoq que podria haber indagado mas pero me quede con lo que me servia solamente
+2. 5, hice varios experimentos o mas bien intentos para conseguir el resultado esperado y me senti satisfecho co ncada resultado e intento distinto q hacia para avanzar
+3. 4 ya que no me tome tanto tiempo de ponerme a analisar cada detalle, pero si estuve pendiente de multiples aspectos
+4. 4, no me termine de quedar con todos los conceptos ya que hice muchas cosas puntuales pero muchas cosas me llegaron a servir a la hora de hacer los experimentos y el proceso
+
