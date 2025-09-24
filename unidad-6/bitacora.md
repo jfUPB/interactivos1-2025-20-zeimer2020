@@ -24,9 +24,10 @@ dos esferas conectandose entre si con dos rayas negras que viajan entre las dos 
 me avisa que un usuario se conecto a la pagina para tener registro de lo ocurrido
 
 
-Describe qué sucede en ambas páginas del navegador cuando mueves una de las ventanas. ¿Cambia algo visualmente? ¿Qué mensajes aparecen (si los hay) en la consola del navegador (usualmente accesible con F12 -> Pestaña Consola) y en la terminal del servidor?
+#### Describe qué sucede en ambas páginas del navegador cuando mueves una de las ventanas. ¿Cambia algo visualmente? ¿Qué mensajes aparecen (si los hay) en la consola del navegador (usualmente accesible con F12 -> Pestaña Consola) y en la terminal del servidor?
 
 muestra el registro de "movimiento" de alguna manera, cada vez que se mueve se supone que se vuelve a dibujar la figura para seguir a la otra pagina o hacer la ilusion de eso, en la terminal ya se muestra como el registro de cada re dibujada
+
 
 
 
