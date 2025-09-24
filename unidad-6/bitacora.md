@@ -17,11 +17,18 @@ Server is listening on http://localhost:3000
 esto me muestra el lugar donde se activa y tambien que el node server esta creandolo
 
 
-Describe lo que ves inicialmente en page1 y page2 en tu navegador.
+#### Describe lo que ves inicialmente en page1 y page2 en tu navegador.
 dos esferas conectandose entre si con dos rayas negras que viajan entre las dos paginas
 
-¿Qué mensajes aparecieron en la terminal del servidor cuando abriste page1 y page2?
+#### ¿Qué mensajes aparecieron en la terminal del servidor cuando abriste page1 y page2?
 me avisa que un usuario se conecto a la pagina para tener registro de lo ocurrido
 
 
 Describe qué sucede en ambas páginas del navegador cuando mueves una de las ventanas. ¿Cambia algo visualmente? ¿Qué mensajes aparecen (si los hay) en la consola del navegador (usualmente accesible con F12 -> Pestaña Consola) y en la terminal del servidor?
+
+muestra el registro de "movimiento" de alguna manera, cada vez que se mueve se supone que se vuelve a dibujar la figura para seguir a la otra pagina o hacer la ilusion de eso, en la terminal ya se muestra como el registro de cada re dibujada
+
+
+
+
+
