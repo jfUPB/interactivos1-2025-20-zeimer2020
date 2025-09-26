@@ -28,8 +28,40 @@ me avisa que un usuario se conecto a la pagina para tener registro de lo ocurrid
 
 muestra el registro de "movimiento" de alguna manera, cada vez que se mueve se supone que se vuelve a dibujar la figura para seguir a la otra pagina o hacer la ilusion de eso, en la terminal ya se muestra como el registro de cada re dibujada
 
+### ¿Puedes identificar otros ejemplos de relaciones Cliente-Servidor en tu vida diaria (no necesariamente digitales)? Por ejemplo, al pedir comida en un restaurante. ¿Quién es el cliente y quién el servidor? ¿Qué se pide y qué se entrega?
+
+por ejemplo los cines, el cliente seria la sala el servidor podria ser el cuartico donde esta el reproductor ademas de que podria ser la registradora
+
+### Toma la URL de tu sitio web favorito. Intenta identificar el protocolo, el nombre de dominio y la ruta (si la hay). ¿Qué crees que pasa si solo escribes el nombre de dominio (ej. www.google.com) sin una ruta específica? ¿Qué “página por defecto” crees que te envía el servidor?
+
+url: https://www.youtube.com/?app=desktop&hl=es
+
+protocolo: youtube usea https 
+
+dominio: youtube.com
+
+lo que pasa si solo se coloca el dmoninion sin ruta es que de todas formas sigue funcionando
+
+¿Qué parte crees que es HTML (ej. los campos de texto, el botón)?
+
+Campos de texto para correo y contraseña
+Boton de siguiente
+Enlaces como "Olvidaste tu correo" o "Crear cuenta"
+Logo de Google
+
+¿Qué parte es CSS (ej. el color del botón, el tipo de letra)?
 
 
+Color azul del boton
+Tipo y tamaño de letra
+Espacios en blanco y centrado del formulario
+Bordes redondeados de los campos
 
+¿Qué parte es JavaScript (ej. la comprobación de si escribiste algo antes de enviar, el mensaje de “contraseña incorrecta” que aparece sin recargar la página)?
+
+Validar si los campos estan vacios
+Mostrar mensajes de error inmediatos
+Avisar "contraseña incorrecta" sin recargar la pagina
+Redirigir al siguiente paso despues de validar
 
 
