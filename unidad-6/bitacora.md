@@ -648,12 +648,15 @@ function mousePressed() {
 }
 ```
 
+primero es el server, luego page1 y page2
+
 Autoevaluacion
 
 mi nota es 5
 
 ya que realice todas las actividades de esta unidad
 
+adjunto evidencias de que hice todo
 actividad 1
 [evidencia](#actividad1)
 actividad 2
@@ -664,6 +667,7 @@ actividad 4
 [evidencia](#actividad4)
 actividad 5
 [evidencia](#actividad5)
+
 
 
 
