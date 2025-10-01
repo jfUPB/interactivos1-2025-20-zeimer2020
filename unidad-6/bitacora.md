@@ -165,7 +165,7 @@ lo que hice fue colocar una pelotica azul compartida en ambas paginas, cuando un
 
 <img width="726" height="328" alt="image" src="https://github.com/user-attachments/assets/f3980803-7fc7-4fa8-bfe2-8d25621bf321" />
 
-``` server js
+```js
 const express = require('express');
 const http = require('http');
 const socketIO = require('socket.io');
@@ -302,7 +302,7 @@ server.listen(port, () => {
 });
 ```
 
-``` page1 js
+```js
 
 let currentPageData = {
     x: window.screenX,
@@ -475,7 +475,7 @@ function mousePressed() {
 }
 ```
 
-``` page2 js
+```js
 let currentPageData = {
     x: window.screenX,
     y: window.screenY,
@@ -664,6 +664,7 @@ actividad 4
 [evidencia](#actividad4)
 actividad 5
 [evidencia](#actividad5)
+
 
 
 
