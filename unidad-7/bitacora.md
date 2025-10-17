@@ -73,6 +73,9 @@ song = loadnSOund, esto en el prelouad, uas el instrumento de analizis fft, ampl
 
 # Actividad 5
 
+
+La cancion va del amor entonces use un electrocardiograma para representar el amor que se siente, ademas se llama i want it that way, de no rendirse y asi entonces pense que seria bueno aumentar o bajar la potencia del mismo
+
 Apply
 
 
@@ -350,6 +353,7 @@ bind(document.getElementById('m3'), 3);
 5:[evidencias](#actividad5)
 
 nota: 4
+
 
 
 
