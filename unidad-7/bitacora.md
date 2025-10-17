@@ -286,6 +286,60 @@ bind(document.getElementById('m1'), 1);
 bind(document.getElementById('m2'), 2);
 bind(document.getElementById('m3'), 3);
 ```
+``` html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.0/lib/p5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.0/lib/addons/p5.sound.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <style>html,body{margin:0;background:#0b0f12}</style>
+</head>
+<body>
+  <main></main>
+  <script src="sketch.js"></script>
+</body>
+</html>
+```
+``` html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<script src="/socket.io/socket.io.js"></script>
+<style>
+  html,body{margin:0;height:100%;background:#0b0f12;color:#e7ecef;font-family:system-ui}
+  .wrap{display:flex;flex-direction:column;gap:16px;align-items:center;justify-content:center;height:100%}
+  .row{display:flex;gap:12px}
+  button{padding:14px 20px;border-radius:12px;border:0;background:#1a2430;color:#e7ecef;font-size:18px}
+  .conn{opacity:.85}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="row">
+      <button id="m1">Modo 1</button>
+      <button id="m2">Modo 2</button>
+      <button id="m3">Modo 3</button>
+    </div>
+    <div class="conn" id="conn">conectando…</div>
+  </div>
+  <script>
+    const sock = io();
+    const connEl = document.getElementById('conn');
+    sock.on('connect', ()=> connEl.textContent = 'conectado · '+sock.id);
+    sock.on('connect_error', e=> connEl.textContent = 'sin conexion · '+(e.message||'error'));
+    const send = m => sock.emit('modeChange', m);
+    document.getElementById('m1').addEventListener('click', ()=>send(1));
+    document.getElementById('m2').addEventListener('click', ()=>send(2));
+    document.getElementById('m3').addEventListener('click', ()=>send(3));
+  </script>
+</body>
+</html>
+```
+
 
 # Autoevaluacion 
 
@@ -296,6 +350,7 @@ bind(document.getElementById('m3'), 3);
 5:[evidencias](#actividad5)
 
 nota: 5
+
 
 
 
