@@ -13,6 +13,5 @@ Electrocardiograma vibrando al ritmo de la musica
 
 Pues el funcionamiento de el microbit seria el mismo que el del ceular, simplemente el boton A pondria modo 1, el boton b pondria modo 2 y el shake pondria modo 3
 
-### Haz un bocetos de todas las interfaces del sistema.
-### Haz un diagrama que explique cómo se comunicarán los diferentes componentes del sistema.
+# Apply
 
