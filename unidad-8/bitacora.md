@@ -1,6 +1,7 @@
 
 # Evidencias de la unidad 8
 
+<a name = "actividad1"> </a>
 
 
 ### Documenta los referentes visuales que te inspiren.
@@ -14,6 +15,8 @@ Electrocardiograma vibrando al ritmo de la musica
 ### Explica cómo el móvil y el micro:bit controlarán las visuales.
 
 Pues el funcionamiento de el microbit seria el mismo que el del ceular, simplemente el boton A pondria modo 1, el boton b pondria modo 2 y el shake pondria modo 3
+
+<a name = "actividad2"> </a>
 
 # Apply
 
@@ -344,10 +347,14 @@ server.listen(3000, '0.0.0.0', () => console.log('http://localhost:3000'));
 
 Autoevaluacion 
 
-5 
+4 
+
+[evidencias](#actividad1)
+[evidencias](#actividad2)
 
 aqui atras esta el codigo evidenciando que si lo hice, ademas tambien tengo lo que me inspiro mas arriba
-cumpliendo todo lo de la bitacora
+cumpliendo todo lo de la bitacora menos el diagrama (profe tu sabes como me gustan los diagramas :D)
+
 
 
 
